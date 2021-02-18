@@ -1,0 +1,16 @@
+[Wed Feb 10 22:13:33.423203 2021] [so:warn] [pid 7] AH01574: module rewrite_module is already loaded, skipping
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.2. Set the 'ServerName' directive globally to suppress this message
+[Wed Feb 10 22:13:33.987298 2021] [mpm_prefork:notice] [pid 7] AH00163: Apache/2.4.38 (Debian) PHP/7.4.4 configured -- resuming normal operations
+[Wed Feb 10 22:13:33.987383 2021] [core:notice] [pid 7] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Thu Feb 18 15:14:19.783393 2021] [so:warn] [pid 7] AH01574: module rewrite_module is already loaded, skipping
+AH00112: Warning: DocumentRoot [/var/www/html/public] does not exist
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.2. Set the 'ServerName' directive globally to suppress this message
+[Thu Feb 18 15:14:19.802531 2021] [mpm_prefork:notice] [pid 7] AH00163: Apache/2.4.38 (Debian) PHP/8.0.2 configured -- resuming normal operations
+[Thu Feb 18 15:14:19.802620 2021] [core:notice] [pid 7] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Thu Feb 18 15:17:40.720449 2021] [so:warn] [pid 7] AH01574: module rewrite_module is already loaded, skipping
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.23.0.2. Set the 'ServerName' directive globally to suppress this message
+[Thu Feb 18 15:17:40.742157 2021] [mpm_prefork:notice] [pid 7] AH00163: Apache/2.4.38 (Debian) PHP/8.0.2 configured -- resuming normal operations
+[Thu Feb 18 15:17:40.742262 2021] [core:notice] [pid 7] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Thu Feb 18 15:17:46.288972 2021] [php:notice] [pid 8] [client 172.23.0.1:50362] [error] Uncaught PHP Exception Symfony\\Component\\HttpKernel\\Exception\\NotFoundHttpException: "No route found for "GET /"" at /var/www/html/vendor/symfony/http-kernel/EventListener/RouterListener.php line 136\n
+[Thu Feb 18 15:35:41.235409 2021] [php:notice] [pid 10] [client 172.23.0.1:50428] [info] Matched route "main".\n
+[Thu Feb 18 15:46:10.083831 2021] [php:notice] [pid 12] [client 172.23.0.1:50466] [info] Matched route "main".\n

@@ -1,0 +1,27 @@
+version: "3.5"
+services:
+  app:
+    build: .
+    container_name: learn-symfony.app
+    ports:
+        - "9010:80"
+        - "9110:443"
+    volumes:
+        - .:/var/www/html:cached
+        - ./logs/:/var/log/apache2
+
+  mysql:
+    image: mysql:8.0
+    container_name: learn-symfony.mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+        MYSQL_ROOT_PASSWORD: 1234
+    ports:
+        - "9011:3306"
+    networks:
+        - learn-symfony
+
+networks:
+  learn-symfony:
+    name: learn-symfony
