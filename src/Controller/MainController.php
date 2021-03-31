@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace DDD\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\{Request, Response};
@@ -8,7 +8,6 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
-    #[Route('/main', name: 'main')]
     public function index(Request $request): Response
     {
         dump($request);

@@ -16,7 +16,10 @@
         "symfony/yaml": "5.2.*"
     },
     "require-dev": {
+        "behat/behat": "^3.8",
         "phpunit/phpunit": "^9.5",
+        "psalm/plugin-phpunit": "^0.15.1",
+        "squizlabs/php_codesniffer": "*",
         "symfony/maker-bundle": "^1.29",
         "symfony/var-dumper": "5.2.*",
         "vimeo/psalm": "^4.6"

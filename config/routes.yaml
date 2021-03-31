@@ -1,3 +1,4 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+blog_list:
+  path: /blog
+  controller: DDD\Controller\MainController::index
+  methods: GET

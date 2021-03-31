@@ -1,14 +1,22 @@
-version: "3.5"
+version: "3"
 services:
   app:
-    build: .
+    build: 
+        context: .docker/php
+        args:
+            UID: $U_ID
     container_name: learn-symfony.app
     ports:
         - "9010:80"
-        - "9110:443"
+    environment:
+        PHP_IDE_CONFIG: "serverName=Docker"
+        PHP_XDEBUG_ENABLED: 1
+        XDEBUG_CONFIG: remote_host=172.17.0.1 remote_port=9005
     volumes:
-        - .:/var/www/html:cached
-        - ./logs/:/var/log/apache2
+        - .:/appdata/www
+        - .docker/php/xdebug-linux.ini:/usr/local/etc/php/conf.d/xdebug.ini
+    depends_on:
+        - mysql
 
   mysql:
     image: mysql:8.0
@@ -19,9 +27,4 @@ services:
         MYSQL_ROOT_PASSWORD: 1234
     ports:
         - "9011:3306"
-    networks:
-        - learn-symfony
-
-networks:
-  learn-symfony:
-    name: learn-symfony
+        
