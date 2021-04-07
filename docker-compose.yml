@@ -17,6 +17,8 @@ services:
         - .docker/php/xdebug-linux.ini:/usr/local/etc/php/conf.d/xdebug.ini
     depends_on:
         - mysql
+    networks:
+        - app_mysql
 
   mysql:
     image: mysql:8.0
@@ -27,4 +29,9 @@ services:
         MYSQL_ROOT_PASSWORD: 1234
     ports:
         - "9011:3306"
-        
+    networks:
+        - app_mysql
+
+networks:
+    app_mysql:
+        name: app_mysql

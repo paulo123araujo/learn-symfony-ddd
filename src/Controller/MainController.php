@@ -10,7 +10,6 @@ class MainController extends AbstractController
 {
     public function index(Request $request): Response
     {
-        dump($request);
         return $this->json([
             'message' => 'Welcome to your new controller!',
             'path' => 'src/Controller/MainController.php',
