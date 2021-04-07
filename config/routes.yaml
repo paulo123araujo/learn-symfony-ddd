@@ -1,4 +1,4 @@
-blog_list:
-  path: /blog
+home:
+  path: /
   controller: DDD\Controller\MainController::index
   methods: GET
